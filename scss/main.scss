@@ -1,0 +1,26 @@
+$primary-color: #444;
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $primary-color;
+
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+//align nav bar to center
+.top-navbar {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+//nav bar links
+a {
+  //set color
+  color: #fff;
+  //remove line under link
+  text-decoration: none;
+  //space between links
+  margin: 10px;
+}

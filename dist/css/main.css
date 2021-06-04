@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+.top-navbar {
+  margin-top: 1rem;
+  text-align: center; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px; }
