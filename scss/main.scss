@@ -1,30 +1,91 @@
-$primary-color: #444;
+$primary-color: #000000;
+$secondary-color: #fffafa;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
 * {
   box-sizing: border-box;
 }
 body {
   background: $primary-color;
-
+  padding-top: 0px !important;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
+  border-top: steelblue;
 }
 //align nav bar to center
 .top-navbar {
-  margin-top: 1rem;
+  background-color: #161616;
   text-align: center;
+  padding: 1rem;
+  //border-bottom: $secondary-color;
+  a {
+    //set color
+    color: $secondary-color;
+    //remove line under link
+    text-decoration: none;
+    //space between links
+    margin: 10px;
+    &:hover {
+      color: darkcyan;
+      @include easeOut();
+    }
+  }
+}
+// Headings
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+
+  //Change properties of lg-heading
+  &.lg-heading {
+    font-size: 5rem;
+    color: $secondary-color;
+    .text-secondary {
+      color: $secondary-color;
+    }
+  }
+  //Change properties of sm-heading
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
 }
 
-//nav bar links
-a {
-  //set color
-  color: #fff;
-  //remove line under link
-  text-decoration: none;
-  //space between links
-  margin: 10px;
+//change color for current page
+.current {
+  background-color: darkcyan;
+  padding: 1rem;
+  border-radius: 10px;
 }
+main {
+  padding: 4rem;
 
-.custom-icon {
-  background: url("..dist/img/soundslice_icon.jpg");
+  .icons {
+    margin-top: 1rem;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0.4rem;
+    &:hover {
+      color: darkcyan;
+      @include easeOut;
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }
