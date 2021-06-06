@@ -3,11 +3,24 @@
 
 body {
   background: #000000;
-  padding-top: 0px !important;
   height: 100%;
   margin: 0;
-  font-family: sans-serif;
-  border-top: steelblue; }
+  font-family: sans-serif; }
+  body#bg-img {
+    background: url(../img/background.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 139, 139, 0.4);
+      z-index: -1; }
 
 .top-navbar {
   background-color: #161616;
@@ -17,8 +30,8 @@ body {
     color: #fffafa;
     text-decoration: none;
     margin: 10px; }
-    .top-navbar a:hover {
-      color: darkcyan;
+    .top-navbar a:hover:not(.current) {
+      color: #e6e600;
       transition: all 0.5s ease-out; }
 
 h1,
@@ -29,15 +42,12 @@ h2 {
   h2.lg-heading {
     font-size: 5rem;
     color: #fffafa; }
-    h1.lg-heading .text-secondary,
-    h2.lg-heading .text-secondary {
-      color: #fffafa; }
   h1.sm-heading,
   h2.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     color: #fffafa;
-    background: rgba(5, 5, 5, 0.5); }
+    background: rgba(0, 149, 149, 0.5); }
 
 .current {
   background-color: darkcyan;
@@ -54,7 +64,7 @@ main {
     margin: 10px;
     padding: 0.4rem; }
     main a:hover {
-      color: darkcyan;
+      color: #e6e600;
       transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
