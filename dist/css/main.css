@@ -1,3 +1,18 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  margin: 0px 5px 5px 5px; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+
 * {
   box-sizing: border-box; }
 
@@ -19,18 +34,22 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 139, 139, 0.4);
+      background: rgba(0, 139, 139, 0.2);
       z-index: -1; }
 
-.top-navbar {
+header .top-navbar {
   background-color: #161616;
   text-align: center;
-  padding: 1rem; }
-  .top-navbar a {
+  padding: 1rem;
+  width: 100%;
+  z-index: 2; }
+  header .top-navbar a,
+  header .top-navbar div {
     color: #fffafa;
     text-decoration: none;
     margin: 10px; }
-    .top-navbar a:hover:not(.current) {
+    header .top-navbar a:hover:not(.current),
+    header .top-navbar div:hover:not(.current) {
       color: #e6e600;
       transition: all 0.5s ease-out; }
 

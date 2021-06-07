@@ -1,0 +1,19 @@
+// Contact button
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
+  @include easeOut;
+  margin: 0px 5px 5px 5px;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut;
+  }
+}
