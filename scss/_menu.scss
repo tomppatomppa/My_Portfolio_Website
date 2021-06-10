@@ -49,7 +49,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.91;
+  //opacity: 0.91;
   //hide links by default
   visibility: hidden;
 
@@ -75,6 +75,7 @@
     //outside the page/ right side
     transform: translate3d(100%, 0, 0);
     @include easeOut;
+    padding: 1rem;
 
     &.show {
       //slide from right
@@ -88,10 +89,12 @@
 
       box-sizing: border-box;
       width: 620px;
-      height: auto;
+      height: 600px;
+      background: cover;
     }
   }
   &-branding {
+    opacity: 0.9;
     background: lighten($primary-color, 7);
     transform: translate3d(-100%, 0, 0);
     @include easeOut;

@@ -1,3 +1,5 @@
+// soundslice video
+var ssiframe = document.getElementById('ssembed').contentWindow;
 // Select DOM items
 
 const menuBtn = document.querySelector(".menu-btn");
@@ -28,7 +30,11 @@ function toggleMenu() {
         menuNav.classList.remove("show");
         menuBranding.classList.remove("show");
         navItems.forEach(item => item.classList.remove("show"));
-
+        //stop video playback when menu is closed
+        ssiframe.postMessage('{"method": "pause"}', 'https://www.soundslice.com/slices/ql4Dc/embed/');
         showMenu = false;
     }
 }
+
+
+
