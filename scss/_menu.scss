@@ -49,6 +49,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+
   //opacity: 0.91;
   //hide links by default
   visibility: hidden;
@@ -59,6 +60,7 @@
 
   &-branding,
   &-nav {
+    margin-top: 0%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -83,10 +85,9 @@
     }
     //embeded soundslice
     p {
-      border: 1px solid #fff;
+      //border: 1px solid #fff;
       margin: 0;
       padding: 0;
-
       box-sizing: border-box;
       width: 620px;
       height: 600px;
