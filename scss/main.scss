@@ -6,8 +6,9 @@
 }
 body {
   @include background;
+
   background: $primary-color;
-  //padding-top: 0px !important;
+
   height: 100%;
   margin: 0;
   font-family: sans-serif;
@@ -19,7 +20,7 @@ header {
   .top-navbar {
     background-color: #161616;
     text-align: center;
-
+    height: 50px;
     //position: fixed;
     width: 100%;
     z-index: 2;
@@ -35,11 +36,14 @@ header {
       //remove line under link
       text-decoration: none;
       //space between links
+
+      margin-top: 8px;
       margin-left: 20px;
       margin-right: 20px;
+      margin-bottom: 7px;
       &:hover:not(.current) {
         //should not effect "current"
-        color: #e6e600;
+        color: #f47835;
         @include easeOut();
       }
     }
@@ -72,7 +76,7 @@ h2 {
 //change color for current page
 .current {
   background-color: darkcyan;
-  padding: 1rem;
+  //padding: 1rem;
   border-radius: 10px;
 }
 main {
