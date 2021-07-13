@@ -11,6 +11,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: sans-serif;
+  overflow: hidden;
   //border-top: steelblue;
 }
 //align nav bar to center
@@ -18,21 +19,26 @@ header {
   .top-navbar {
     background-color: #161616;
     text-align: center;
-    padding: 1rem;
+
     //position: fixed;
     width: 100%;
     z-index: 2;
 
+    //list-style: none; //remove bulletpoints
+
     a,
-    div {
+    li {
+      // list to horizontal
+      display: inline-block;
       //set color
       color: $secondary-color;
       //remove line under link
       text-decoration: none;
       //space between links
-      margin: 10px;
-
+      margin-left: 20px;
+      margin-right: 20px;
       &:hover:not(.current) {
+        //should not effect "current"
         color: #e6e600;
         @include easeOut();
       }
@@ -54,7 +60,9 @@ h2 {
 
   //Change properties of sm-heading
   &.sm-heading {
+    margin-right: 40rem;
     margin-bottom: 2rem;
+    border-radius: 1rem;
     padding: 0.2rem 1rem;
     color: $secondary-color;
     background: rgba(lighten($overlay-color, 2), 0.5);
@@ -69,6 +77,8 @@ h2 {
 }
 main {
   padding: 4rem;
+
+  min-height: calc(100vh - 110px);
 
   .icons {
     margin-top: 1rem;
@@ -91,4 +101,27 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  height: 50px;
+  .icons {
+    margin-bottom: 5rem;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0.4rem;
+
+    &:hover {
+      color: #e6e600;
+      @include easeOut;
+    }
+  }
+
+  //background-color: darken($color: $primary-color, $amount: 10);
 }
