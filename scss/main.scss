@@ -1,6 +1,6 @@
 @import "config";
 @import "menu";
-@import "mobile";
+
 * {
   box-sizing: border-box;
 }
@@ -12,7 +12,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: sans-serif;
-  overflow: hidden;
+  //overflow: hidden;
   //border-top: steelblue;
 }
 //align nav bar to center
@@ -66,16 +66,16 @@ h2 {
   &.sm-heading {
     margin-right: 40rem;
     margin-bottom: 2rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 0.2rem 1rem;
     color: $secondary-color;
-    background: rgba(lighten($overlay-color, 2), 0.5);
+    background: rgba(lighten($overlay-color, 2), 0.2);
   }
 }
 
 //change color for current page
 .current {
-  background-color: darkcyan;
+  background-color: $overlay-color;
   //padding: 1rem;
   border-radius: 10px;
 }
@@ -129,3 +129,40 @@ main {
 
   //background-color: darken($color: $primary-color, $amount: 10);
 }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 10%;
+  border: $secondary-color 3px solid;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.job-1 {
+  grid-area: job1;
+}
+.job-2 {
+  grid-area: job2;
+}
+.job-3 {
+  grid-area: job3;
+}
+
+.job {
+  background: lighten($overlay-color, 5);
+
+  padding: 0.5rem;
+  border-bottom: $overlay-color 5px solid;
+}
+
+@import "mobile";

@@ -1,16 +1,15 @@
 $primary-color: #000000;
-$secondary-color: #fffafa;
-$overlay-color: darkcyan;
+$secondary-color: #e1dddb;
+$overlay-color: #0c4a60;
+//$overlay-color: darkcyan;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.2;
-
-$show-background-video: false;
-$about-video: url(../video/hemmalive.mp4);
+$background-opacity: 0.8;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
 @mixin background {
   @if $show-home-image {
     &#bg-img {
@@ -24,7 +23,7 @@ $about-video: url(../video/hemmalive.mp4);
       &:after {
         content: "";
         //cover whole body
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;

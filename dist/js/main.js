@@ -34,7 +34,12 @@ function toggleMenu() {
         ssiframe.postMessage('{"method": "pause"}', 'https://www.soundslice.com/slices/ql4Dc/embed/');
         showMenu = false;
     }
+    
 }
 
+function togglePage() {
+    
+    
 
+}
 

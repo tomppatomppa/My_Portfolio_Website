@@ -8,7 +8,7 @@
 @include mediaMd {
   main {
     align-items: center;
-    text-align: center;
+    text-align: left;
 
     .lg-heading {
       line-height: 1;
@@ -16,7 +16,7 @@
     }
   }
   .menu-btn {
-    right: 1px;
+    right: 5px;
   }
   ul.menu-nav,
   div.menu-branding {
@@ -37,6 +37,21 @@
       background-size: cover;
     }
   }
+  body#bg-img li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
 }
 // Smartphones
 @include mediaSm {
@@ -44,6 +59,11 @@
     margin-top: 10vh;
   }
   .menu-btn {
-    right: -5px;
+    right: 7px;
+  }
+
+  body#bg-img li {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }
