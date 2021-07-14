@@ -126,8 +126,53 @@ main {
       @include easeOut;
     }
   }
+}
+//Lessons/Categories
+#lessons {
+  text-align: center;
+  h1 {
+    margin-bottom: 20px;
+  }
+  .projects {
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 
-  //background-color: darken($color: $primary-color, $amount: 10);
+    img {
+      width: 100%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondary-color;
+        width: 101%;
+        @include easeOut;
+      }
+    }
+  }
+}
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  //margin-left: 45px;
+  &:hover {
+    background: #e6e600;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, $amount: 50);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, $amount: 50);
+  color: #333;
 }
 
 .about-info {
