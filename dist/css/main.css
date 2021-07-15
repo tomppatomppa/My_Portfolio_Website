@@ -1,6 +1,6 @@
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   right: 20px;
   top: 12px;
   cursor: pointer;
@@ -193,16 +193,27 @@ main {
   #lessons h1 {
     margin-bottom: 20px; }
   #lessons .projects {
-    display: grid;
-    grid-gap: 20px; }
-    #lessons .projects img {
+    display: grid; }
+    #lessons .projects .lesson-category {
       width: 100%;
-      border: 3px #fff solid; }
-      #lessons .projects img:hover {
+      height: auto;
+      object-fit: fill;
+      position: relative;
+      margin: 8% 10% 5% 10%; }
+      #lessons .projects .lesson-category:hover {
         opacity: 0.5;
-        border-color: #e1dddb;
-        width: 101%;
         transition: all 0.5s ease-out; }
+    #lessons .projects .lesson-category img {
+      width: 100%;
+      margin-top: 20px; }
+    #lessons .projects .text-wrapper {
+      width: 100%;
+      position: relative;
+      margin-top: -40%; }
+    #lessons .projects .text-wrapper h1 {
+      text-align: center;
+      color: #fff;
+      margin-left: 3rem; }
 
 .btn, .btn-dark, .btn-light {
   display: block;

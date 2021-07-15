@@ -160,21 +160,39 @@ main {
   h1 {
     margin-bottom: 20px;
   }
+
   .projects {
     display: grid;
     //grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
 
-    img {
+    .lesson-category {
       width: 100%;
-      border: 3px #fff solid;
+      height: auto;
+      object-fit: fill;
+      position: relative;
+      margin: 8% 10% 5% 10%;
 
       &:hover {
         opacity: 0.5;
-        border-color: $secondary-color;
-        width: 101%;
+        //border-color: $secondary-color;
+
         @include easeOut;
       }
+    }
+    .lesson-category img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .text-wrapper {
+      width: 100%;
+      position: relative;
+      margin-top: -40%;
+    }
+    .text-wrapper h1 {
+      text-align: center;
+      color: #fff;
+      margin-left: 3rem;
+      //margin-bottom: 4rem;
     }
   }
 }
