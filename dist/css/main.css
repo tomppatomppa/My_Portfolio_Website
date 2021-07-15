@@ -192,6 +192,16 @@ main {
   text-align: center; }
   #lessons h1 {
     margin-bottom: 20px; }
+  #lessons .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: -40%; }
+  #lessons .tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: center;
+    color: #fff;
+    margin-left: 3rem;
+    padding: 5px 0; }
   #lessons .projects {
     display: grid; }
     #lessons .projects .lesson-category {
@@ -199,13 +209,15 @@ main {
       height: auto;
       object-fit: fill;
       position: relative;
-      margin: 8% 10% 5% 10%; }
-      #lessons .projects .lesson-category:hover {
-        opacity: 0.5;
-        transition: all 0.5s ease-out; }
+      margin: 7% 8% 5% 0%; }
+      #lessons .projects .lesson-category:hover .tooltiptext {
+        visibility: visible; }
     #lessons .projects .lesson-category img {
       width: 100%;
       margin-top: 20px; }
+      #lessons .projects .lesson-category img:hover {
+        opacity: 0.5;
+        transition: all 0.5s ease-out; }
     #lessons .projects .text-wrapper {
       width: 100%;
       position: relative;
@@ -213,24 +225,17 @@ main {
     #lessons .projects .text-wrapper h1 {
       text-align: center;
       color: #fff;
-      margin-left: 3rem; }
+      margin-left: 3rem;
+      text-shadow: 2px 2px #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn {
   display: block;
   padding: 0.5rem 0.5rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover {
     background: #e6e600;
     color: set-text-color(#e1dddb); }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
-
-.btn-light {
-  background: gray;
-  color: #333; }
 
 .about-info {
   display: grid;

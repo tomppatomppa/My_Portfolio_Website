@@ -160,28 +160,43 @@ main {
   h1 {
     margin-bottom: 20px;
   }
+  //ideas for tooltip https://www.w3schools.com/css/css_tooltip.asp#:~:text=The%20%3Ahover%20selector%20is%20used,with%20class%3D%22tooltip%22%20.
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: -40%;
+    //margin-bottom: 20%;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: center;
 
+    color: #fff;
+    margin-left: 3rem;
+    padding: 5px 0;
+  }
   .projects {
     display: grid;
-    //grid-template-columns: repeat(3, 1fr);
 
     .lesson-category {
       width: 100%;
       height: auto;
       object-fit: fill;
       position: relative;
-      margin: 8% 10% 5% 10%;
-
+      margin: 7% 8% 5% 0%;
       &:hover {
-        opacity: 0.5;
-        //border-color: $secondary-color;
-
-        @include easeOut;
+        .tooltiptext {
+          visibility: visible;
+        }
       }
     }
     .lesson-category img {
       width: 100%;
       margin-top: 20px;
+      &:hover {
+        opacity: 0.5;
+        @include easeOut;
+      }
     }
     .text-wrapper {
       width: 100%;
@@ -192,10 +207,11 @@ main {
       text-align: center;
       color: #fff;
       margin-left: 3rem;
-      //margin-bottom: 4rem;
+      text-shadow: 2px 2px #000;
     }
   }
 }
+
 // Button Styles
 .btn {
   display: block;
@@ -207,17 +223,6 @@ main {
     background: #e6e600;
     color: set-text-color($secondary-color);
   }
-}
-
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, $amount: 50);
-  color: #fff;
-}
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, $amount: 50);
-  color: #333;
 }
 
 .about-info {
