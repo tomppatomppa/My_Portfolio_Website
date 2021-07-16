@@ -106,6 +106,15 @@ header .top-navbar {
   height: 50px;
   width: 100%;
   z-index: 2; }
+  header .top-navbar h4 {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: -32px;
+    margin-right: 60px;
+    left: 20px;
+    font-weight: normal; }
   header .top-navbar a,
   header .top-navbar li {
     display: inline-block;
@@ -314,13 +323,15 @@ main {
       height: 500px;
       background-size: cover; }
   body#bg-img li {
-    margin-left: 10px;
-    margin-right: 10px; }
+    margin-left: 5px;
+    margin-right: 5px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  body#bg-img h4 {
+    visibility: hidden; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

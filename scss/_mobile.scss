@@ -44,8 +44,8 @@
     }
   }
   body#bg-img li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .about-info {
@@ -60,6 +60,9 @@
   }
   .projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+  body#bg-img h4 {
+    visibility: hidden;
   }
 }
 // Smartphones

@@ -26,7 +26,18 @@ header {
     z-index: 2;
 
     //list-style: none; //remove bulletpoints
-
+    h4 {
+      //visibility: hidden;
+      color: white;
+      text-decoration: none;
+      text-align: right;
+      margin-right: 20px;
+      margin-top: -32px;
+      margin-right: 60px;
+      //display: inline-block;
+      left: 20px;
+      font-weight: normal;
+    }
     a,
     li {
       // list to horizontal
@@ -41,6 +52,7 @@ header {
       margin-left: 20px;
       margin-right: 20px;
       margin-bottom: 7px;
+
       &:hover:not(.current) {
         //should not effect "current"
         color: #f47835;
