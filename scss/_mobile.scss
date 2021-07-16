@@ -24,22 +24,22 @@
   .menu-btn {
     right: 5px;
   }
-  ul.menu-nav,
+  div.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
   .menu-nav {
+    visibility: hidden;
     height: 75vh;
   }
   .menu-branding {
-    height: 25vh;
+    height: 100vh;
 
     .portrait {
-      background: url("../img/portrait_.jpg");
       width: 150px;
-      height: 200px;
+      height: 500px;
       background-size: cover;
     }
   }

@@ -44,32 +44,38 @@
     overflow: hidden; }
   .menu-nav {
     background: black;
-    list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out;
     padding: 1rem; }
+    .menu-nav img {
+      max-width: 100%; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-    .menu-nav p {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      width: 620px;
-      height: 600px;
-      background: cover; }
   .menu-branding {
-    opacity: 0.9;
-    background: #121212;
+    opacity: 1;
+    background: #030303;
     transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 300px;
-      background: url("../img/portrait_.jpg");
+      text-align: center;
+      width: 100%;
+      height: auto;
       background-size: cover;
       border: solid 2px #e1dddb; }
+      .menu-branding .portrait h1,
+      .menu-branding .portrait h4 {
+        color: #fff; }
+      .menu-branding .portrait .gear-info {
+        background: none;
+        border: none;
+        color: #fff;
+        display: inline-block; }
+        .menu-branding .portrait .gear-info:hover {
+          text-decoration: underline;
+          opacity: 0.5;
+          transition: all 0.5s ease-out; }
 
 * {
   box-sizing: border-box; }
@@ -293,19 +299,19 @@ main {
       margin-bottom: 1rem; }
   .menu-btn {
     right: 5px; }
-  ul.menu-nav,
+  div.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
   .menu-nav {
+    visibility: hidden;
     height: 75vh; }
   .menu-branding {
-    height: 25vh; }
+    height: 100vh; }
     .menu-branding .portrait {
-      background: url("../img/portrait_.jpg");
       width: 150px;
-      height: 200px;
+      height: 500px;
       background-size: cover; }
   body#bg-img li {
     margin-left: 10px;
