@@ -101,6 +101,12 @@
       h4 {
         color: #fff;
       }
+      //when on work page the menu text is not aligned properly
+      //h4 changed to h5
+      h5 {
+        color: #fff;
+        font-size: 100%;
+      }
 
       text-align: center;
       width: 100%;

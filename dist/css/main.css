@@ -68,6 +68,9 @@
       .menu-branding .portrait h1,
       .menu-branding .portrait h4 {
         color: #fff; }
+      .menu-branding .portrait h5 {
+        color: #fff;
+        font-size: 100%; }
       .menu-branding .portrait .gear-info {
         background: none;
         border: none;
