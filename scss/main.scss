@@ -142,7 +142,7 @@ main {
     padding: 0.4rem;
 
     &:hover {
-      color: #e6e600;
+      color: #f47835;
       @include easeOut;
     }
   }
@@ -159,6 +159,7 @@ main {
   div {
     font-size: 2rem;
     border: 2px #fff solid;
+
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
 
@@ -275,8 +276,10 @@ main {
   grid-area: job3;
 }
 
-.job {
-  background: lighten($overlay-color, 5);
+.job,
+.bio {
+  background: rgba(lighten($overlay-color, 2), 0.9);
+
   border-radius: 5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
