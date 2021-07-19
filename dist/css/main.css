@@ -1,6 +1,6 @@
 .menu-btn {
   position: absolute;
-  z-index: 4;
+  z-index: 3;
   right: 20px;
   top: 12px;
   cursor: pointer;
@@ -29,6 +29,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -98,7 +99,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      z-index: -1; }
+      z-index: -2; }
 
 header .top-navbar {
   background-color: #161616;
@@ -226,7 +227,9 @@ main {
     margin-left: 3rem;
     padding: 5px 0; }
   #lessons .projects {
-    display: grid; }
+    display: grid;
+    position: relative;
+    z-index: 0; }
     #lessons .projects .lesson-category {
       width: 100%;
       height: auto;

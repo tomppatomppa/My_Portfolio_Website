@@ -2,7 +2,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 4;
+  z-index: 3;
   right: 20px;
   top: 12px;
   cursor: pointer;
@@ -49,8 +49,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-
-  //opacity: 0.91;
+  z-index: 1;
   //hide links by default
   visibility: hidden;
 

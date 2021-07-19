@@ -12,8 +12,6 @@ body {
   height: 100%;
   margin: 0;
   font-family: sans-serif;
-  //overflow: hidden;
-  //border-top: steelblue;
 }
 //align nav bar to center
 header {
@@ -84,6 +82,7 @@ h2 {
     background: rgba(lighten($overlay-color, 2), 0.2);
   }
 }
+
 //Work page https://support.google.com/youtube/answer/171780?hl=en
 .videoboxes {
   display: flex;
@@ -96,7 +95,6 @@ h2 {
 //change color for current page
 .current {
   background-color: $overlay-color;
-  //padding: 1rem;
   border-radius: 10px;
 }
 main {
@@ -200,6 +198,8 @@ main {
   }
   .projects {
     display: grid;
+    position: relative;
+    z-index: 0;
 
     .lesson-category {
       width: 100%;
@@ -213,6 +213,7 @@ main {
         }
       }
     }
+
     .lesson-category img {
       width: 100%;
       margin-top: 20px;
@@ -234,7 +235,6 @@ main {
     }
   }
 }
-
 // Button Styles
 .btn {
   display: block;
