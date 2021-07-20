@@ -152,11 +152,10 @@ h2 {
 
 .videoboxes {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem; }
 
 .current {
   background-color: #0c4a60;
@@ -209,7 +208,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #e1dddb;
+      background: #0c4a60;
       color: set-text-color(#e1dddb); }
       .boxes div:hover span {
         color: set-text-color(#e1dddb); }
