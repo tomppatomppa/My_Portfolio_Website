@@ -1,0 +1,351 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 12px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  margin: 0px 5px 5px 5px; }
+  .menu-btn .btn-line {
+    width: 15px;
+    height: 2px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+    .menu-btn .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 8px); }
+    .menu-btn .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(-5px, -10px); }
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(120deg) translate(6px, -8px); }
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0; }
+  .menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(60deg) translate(-5px, 1px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    margin-top: 0%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    background: black;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.5s ease-out;
+    padding: 1rem; }
+    .menu-nav img {
+      max-width: 100%; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    opacity: 1;
+    background: #030303;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      text-align: center;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      border: solid 2px #e1dddb; }
+      .menu-branding .portrait h1,
+      .menu-branding .portrait h4 {
+        color: #fff; }
+      .menu-branding .portrait h5 {
+        color: #fff;
+        font-size: 100%; }
+      .menu-branding .portrait .gear-info {
+        background: none;
+        border: none;
+        color: #fff;
+        display: inline-block; }
+        .menu-branding .portrait .gear-info:hover {
+          text-decoration: underline;
+          opacity: 0.5;
+          transition: all 0.5s ease-out; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #000000;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif; }
+  body#bg-img {
+    background-image: linear-gradient(to right, #0c4a60, rgba(225, 221, 219, 0.3)), url(../img/background.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2; }
+
+header .top-navbar {
+  background-color: #161616;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  z-index: 2; }
+  header .top-navbar h4 {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: -32px;
+    margin-right: 60px;
+    left: 20px;
+    font-weight: normal; }
+  header .top-navbar a,
+  header .top-navbar li {
+    display: inline-block;
+    color: #e1dddb;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 7px; }
+    header .top-navbar a:hover:not(.current),
+    header .top-navbar li:hover:not(.current) {
+      color: #f47835;
+      transition: all 0.5s ease-out; }
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading {
+    font-size: 5rem;
+    color: #e1dddb; }
+  h1.sm-heading,
+  h2.sm-heading {
+    margin-right: 40rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+    color: #e1dddb;
+    background: rgba(13, 81, 105, 0.2); }
+
+.videoboxes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem; }
+
+.current {
+  background-color: #0c4a60;
+  border-radius: 10px; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 110px); }
+  main .icons {
+    margin-top: 1rem; }
+  main a {
+    color: #e1dddb;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0.4rem; }
+    main a:hover {
+      color: #f47835;
+      transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  height: 50px; }
+  #main-footer .icons {
+    margin-bottom: 5rem; }
+  #main-footer a {
+    color: #e1dddb;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0.4rem; }
+    #main-footer a:hover {
+      color: #f47835;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 2px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #0c4a60;
+      color: set-text-color(#e1dddb); }
+      .boxes div:hover span {
+        color: set-text-color(#e1dddb); }
+
+#lessons {
+  text-align: center; }
+  #lessons h1 {
+    margin-bottom: 20px;
+    color: #fff; }
+  #lessons .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: -40%; }
+  #lessons .tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: center;
+    color: #fff;
+    margin-left: 3rem;
+    padding: 5px 0; }
+  #lessons .projects {
+    display: grid;
+    position: relative;
+    z-index: 0; }
+    #lessons .projects .lesson-category {
+      width: 100%;
+      height: auto;
+      object-fit: fill;
+      position: relative;
+      margin: 7% 8% 5% 0%; }
+      #lessons .projects .lesson-category:hover .tooltiptext {
+        visibility: visible; }
+    #lessons .projects .lesson-category img {
+      width: 100%;
+      margin-top: 20px; }
+      #lessons .projects .lesson-category img:hover {
+        opacity: 0.5;
+        transition: all 0.5s ease-out; }
+    #lessons .projects .text-wrapper {
+      width: 100%;
+      position: relative;
+      margin-top: -40%; }
+    #lessons .projects .text-wrapper h1 {
+      text-align: center;
+      color: #fff;
+      margin-left: 3rem;
+      text-shadow: 2px 2px #000; }
+
+.btn {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover {
+    background: #e6e600;
+    color: set-text-color(#e1dddb); }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 0%;
+  border: #e1dddb 3px solid; }
+
+.bio {
+  grid-area: bio; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job,
+.bio {
+  background: rgba(13, 81, 105, 0.9);
+  border-radius: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.5rem;
+  border-bottom: #0c4a60 5px solid; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: left; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .menu-btn {
+    right: 5px; }
+  div.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+  .menu-nav {
+    visibility: hidden;
+    height: 75vh; }
+  .menu-branding {
+    height: 100vh; }
+    .menu-branding .portrait {
+      width: 150px;
+      height: 500px;
+      background-size: cover; }
+  body#bg-img li {
+    margin-left: 3px;
+    margin-right: 3px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  body#bg-img h4 {
+    visibility: hidden; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .menu-btn {
+    right: 8px; }
+  body#bg-img li {
+    margin-left: 0px;
+    margin-right: 0px; }
+  .projects {
+    grid-template-columns: 1fr; } }
