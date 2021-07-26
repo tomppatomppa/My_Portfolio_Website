@@ -1,0 +1,117 @@
+Lappeenrannan teknillinen yliopisto
+School of Business and Management
+
+Sofware Development Skills
+
+Name: Tomi West
+Student Number: 000387778
+
+
+<Introduction to workflow and sass [Part 1].>MODULE
+installed Node JS, comes with node package manager that is required.
+installed Git version controll.
+Installed extensions "live server" for updating page automatically when saved, "bracket pair colorizer" to see where brackets belong
+Windows command "code ." to open project.
+Created basic setup for project which include:
+Created a html file
+Created a main.scss file
+Create a large heading with command "h1"
+Testing page by right clicking and selecting "Open with live server" (extension)
+
+-Browser does not read scss, that is why node sass is needed.
+Created package.json with command "npm init", no need to understand the files that it creates.
+Created node modules folder with command "npm i node-sass"
+
+-Setting up node sass.
+Naming the script as "sass": "node-sass"<which program to run> -w<means watch> scss/<which folder> -o<is output> dist/css/<output folder> --recursive
+Using "npm run <nameOfScript> to run the script.
+
+Changes made in sass will auto reload the live server to display any changes made.
+
+Already familiar with basic git commands and gitignore.
+
+Use command "new-item .gitignore" to make gitignore file on windows, "touch .gitignore" works only on MacOs and Linux.
+
+
+<Homepage and Core Sass/CSS [Part 2].>MODULE
+<header>
+*create with div.menu-
+div class="menu-btn"> (button in upper right corner)
+-Create multple lines with ".btn-lines*3" (for the menu button)
+*still in header but under the div
+nav.menu
+
+-Getting more familiar with different classes
+-Classes are not really explained in the youtube tutorial so wathing the extra material provided. Still a bit confused.
+Learned to create a header, a html5 main tab
+Problems with fontawesome, solved. Typing error.
+create a link to javascript file, 
+when editing main.scss file, page is not updating as intended, solved, 
+Name has to large font, how to change, solved 6rem", transitions(not working), 
+Learned to create @Mixins for Easeout effect.
+Learned the difference between h1, h2, h1 large heading, h2 smaller heading etc
+Declare a variable with $some-variable.
+Create a nested heading with &
+
+<Rotating Menu Button [Part 3].>MODULE
+Creating menu button, button showing but no menu opening.
+
+Using javascript for the menu button functionality, already familiar with c++ so it looks quite familiar.
+
+Created rotating button, middle line dissapears, border lines are rotate 45degrees to form a X.
+
+removed commas from "transition: all 0.5 ease-out ",  works now.
+
+
+
+
+LEARNING DIARY, <Menu Overlay & Responsiveness [Part 4].>MODULE
+Creating menu overlay, hide menu items and move them
+
+Split into nav bar and branding 50|50 screen, sliding menus
+Create anmations with CSS, slide from bottom and top.
+
+Delaying menu item, does not work right now, text dissapears. Problem was typing error again.
+
+Syling navigation links with CSS
+
+Creating layout to take into account different screen sizes (query sass mixins), responsive layout.
+
+
+LEARNING DIARY, <Page With CSS Grid [Part 5].>MODULE
+
+Added a new html file for "about" nav link
+
+Choose a layout with display: grid, flex etc
+
+Grid-template-areas to choose where you want items displayed
+This was a bit hard to understand
+
+Creating a sticky footer, so that it doesn't deteach itself from the bottom.
+
+Make about page responsive so that the grid displays only 1 item per column when
+using small screen device.
+
+
+LEARNING DIARY, <Work and Contact Pages [Part 6]. >MODULE
+Created a html file for work page
+
+Creating more custom looking grid layout
+
+Responsive grid layout again. 3 items on large, 2 on medium, and 1 on mobile
+
+Flexcontainer for contact page
+
+
+LEARNING DIARY, <Website Deployment [Part 7].>MODULE
+push to git, and deploy website
+
+npm i gh-pages
+
+Add your github website address to package.json
+Create deploy script
+npm i gh-pages
+Website should be deployed now
+
+Namecheap for registering custom domain.
+
